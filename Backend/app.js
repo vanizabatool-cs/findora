@@ -6,6 +6,7 @@ const User=require("./models/User.js");
 const session=require("express-session");
 const passport=require("passport");
 const LocalStrategy=require("passport-local");
+const ItemRoute=require("./routes/Items.js");
 const port=8080;
 
 app.listen(port,(req,res)=>{
@@ -34,6 +35,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use("/user",UserRoute);
+app.use("/item",ItemRoute);
 
 app.use((err,req,res,next)=>{
     res.status(500).json({err:err.message||"Internal Server Error"})
