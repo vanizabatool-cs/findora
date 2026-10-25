@@ -263,8 +263,8 @@ Add each member's real name and social links below.
 **Name:** Vaniza Batool
 
 - **Role:** Project Lead / Full-Stack Developer
-- **GitHub:** [@your-github-username](https://github.com/vanizabatool-cs)
-- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/vaniza-batool-5157663a3/)
+- **GitHub:** [Vaniza Batool](https://github.com/vanizabatool-cs)
+- **LinkedIn:** [Vaniza Batool](https://www.linkedin.com/in/vaniza-batool-5157663a3/)
 
 ### 👨‍💻 Team Member 02
 
@@ -279,8 +279,8 @@ Add each member's real name and social links below.
 **Name:**  Ishtiaque Ali
 
 - **Role:** Backend Developer
-- **GitHub:** [@github-username](https://github.com/IshtiaqueDev)
-- **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/ishtiaqueali3/)
+- **GitHub:** [IshtiaqueDev](https://github.com/IshtiaqueDev)
+- **LinkedIn:** [Ishtiaque Ali](https://www.linkedin.com/in/ishtiaqueali3/)
 
 *Roles are suggested starting points. Replace them with your team's actual responsibilities and acknowledge each member's contributions accurately.*
 
@@ -404,5 +404,5 @@ LostLink is a collaborative learning project focused on solving a practical prob
 **One report. One connection. One step closer to finding what's lost.**
 
 <p align="center">
-  Made with 💙 by the LostLink Team
+  Made with 💙 by the DarkX Team
 </p>
