@@ -2,11 +2,16 @@ const express=require("express");
 const router=express.Router();
 const wrapAsync=require("../utils/wrapAsync");
 const User=require("../models/User");
-const checkUniversityMail=require("../middlewares.js");
 const passport=require("passport");
-const isLoggedIn=require("../middlewares.js");
+const {
+    checkUniversityMail,
+    isLoggedIn,
+    alreadyLoggedIn
+} = require("../middlewares");
+
 
 router.post("/login",
+    alreadyLoggedIn,
     passport.authenticate("local")
     ,wrapAsync(async(req,res)=>{
     res.json({
@@ -20,7 +25,9 @@ router.get("/",wrapAsync(async(req,res)=>{
     })
 }))
 
-router.post("/signup",checkUniversityMail,wrapAsync(async(req,res,next)=>{
+router.post("/signup",
+    alreadyLoggedIn
+    ,checkUniversityMail,wrapAsync(async(req,res,next)=>{
     let userData=req.body;
     let user=await User.register({
         username:userData.username,

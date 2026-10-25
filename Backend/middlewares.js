@@ -9,8 +9,6 @@ const checkUniversityMail=(req,res,next)=>{
     }
 }
 
-module.exports=checkUniversityMail;
-
 
 const isLoggedIn=(req,res,next)=>{
     if(!req.isAuthenticated()){
@@ -21,4 +19,20 @@ const isLoggedIn=(req,res,next)=>{
     next();
 }
 
-module.exports=isLoggedIn;
+
+
+const alreadyLoggedIn=(req,res,next)=>{
+    if(req.isAuthenticated()){
+    return res.json({
+        message:"You are already LoggedIn"
+    })}
+    next();
+}
+
+
+
+module.exports = {
+    checkUniversityMail,
+    isLoggedIn,
+    alreadyLoggedIn
+};
