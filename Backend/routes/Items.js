@@ -20,7 +20,7 @@ router.route("/").get(wrapAsync(async(req,res)=>{
    res.json({
     message:"Posted Successfully"
    })
-}));    
+}));   
 
 
 router.get("/myposted/:id",isLoggedIn,wrapAsync(async(req,res)=>{
@@ -38,6 +38,18 @@ router.delete("/delete/:id",isLoggedIn,isOwner,wrapAsync(async(req,res)=>{
     await Item.findByIdAndDelete(id);
     res.json({
         message:"Deleted Successfully"
+    })
+}))
+
+
+router.put("/update/:id",isLoggedIn,isOwner,wrapAsync(async(req,res)=>{
+    let updatedData=req.body;
+    let item=await Item.findByIdAndUpdate(req.params.id,updatedData,{
+        new:true,
+        runValidators:true
+    });
+    res.json({
+        message:"Data Updated Successfully",item
     })
 }))
 
