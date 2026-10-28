@@ -1,19 +1,18 @@
 const Items=require("./models/Item");
 
 const matchingAlgo=async(otherItem)=>{
-    const Items=await Item.find({});
+    const Items=await Item.find({type:"found"});
     const matches=[];    
     for(let item of Items){
         const score=matchingScore(item,OtherItem);
-
         matches.push({
             item:
             otherItem,
-            score
+            score:score
         })
     }
-    
-}  
+    }
+
 
 
 const matchingScore=(item,OtherItem)=>{
