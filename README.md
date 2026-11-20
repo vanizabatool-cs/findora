@@ -200,8 +200,8 @@ This project is developed collaboratively by a team of three computer science st
 
 ### Bilal Ali
 - Frontend Development / UI Integration
-- GitHub: Add GitHub profile link
-- LinkedIn: Add LinkedIn profile link
+- GitHub: https://github.com/alibilaldev
+ 
 
 ### Ishtiaque Ali
 - Backend Development
