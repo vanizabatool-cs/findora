@@ -1,0 +1,61 @@
+.fl-wrap {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fffaf6;
+  z-index: 9999;
+}
+
+.fl-word {
+  display: flex;
+  align-items: baseline;
+  font-family: "Poppins", "Nunito", "Segoe UI", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.8rem, 9vw, 5rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.fl-letter {
+  display: inline-block;
+  color: #1e1038;
+  transform-origin: 50% 80%;
+  animation: fl-pulse 1.4s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.12s);
+}
+
+.fl-dot {
+  display: inline-block;
+  color: #7c4dff;
+  transform-origin: 50% 90%;
+  animation: fl-pulse-dot 1.4s ease-in-out infinite;
+  animation-delay: calc(7 * 0.12s);
+}
+
+@keyframes fl-pulse {
+  0%, 60%, 100% {
+    transform: scale(1);
+    color: #1e1038;
+  }
+  30% {
+    transform: scale(1.35) translateY(-6%);
+    color: #7c4dff;
+  }
+}
+
+@keyframes fl-pulse-dot {
+  0%, 60%, 100% {
+    transform: scale(1);
+    color: #7c4dff;
+  }
+  30% {
+    transform: scale(1.8);
+    color: #b79cff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fl-letter, .fl-dot { animation: none; }
+}

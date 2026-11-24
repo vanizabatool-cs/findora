@@ -1,0 +1,232 @@
+/* Stop the page from scrolling sideways */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Only controls the form's size and position, no visual styling */
+#report-form {
+  box-sizing: border-box;
+  width: min(1180px, calc(100% - 32px));
+  margin: 32px auto 48px;
+}
+
+#report-form *,
+#report-form *::before,
+#report-form *::after {
+  box-sizing: border-box;
+}
+/* ===== Grid ===== */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.field.full-width {
+  grid-column: 1 / -1;
+}
+
+/* ===== Labels ===== */
+.field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1f1b2e;
+}
+
+.field label span {
+  color: #e5484d; /* required asterisk */
+}
+
+.optional-label {
+  margin-left: 8px;
+  padding: 2px 8px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #d6336c !important;
+  background: #f3efff;
+  border-radius: 999px;
+}
+
+/* ===== Inputs ===== */
+.field input[type="text"],
+.field input[type="date"],
+.field input[type="time"],
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 13px 16px;
+  font: inherit;
+  font-size: 0.95rem;
+  color: #1f1b2e;
+  background: #fffdfb;
+  border: 1px solid #e3deee;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #6d4aff;
+  box-shadow: 0 0 0 3px rgba(109, 74, 255, 0.15);
+}
+
+.field-hint {
+  font-size: 0.78rem;
+  color: #7a748c;
+}
+
+/* ===== Photo upload ===== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 32px 20px;
+  text-align: center;
+  cursor: pointer;
+  background: #faf8ff;
+  border: 2px dashed #c9b8ff;
+  border-radius: 16px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.upload-box:hover {
+  background: #f3efff;
+  border-color: #6d4aff;
+}
+
+.upload-box small {
+  color: #7a748c;
+}
+
+.upload-browse {
+  margin-top: 8px;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6d4aff;
+  background: #ffffff;
+  border: 1px solid #c9b8ff;
+  border-radius: 999px;
+}
+
+/* ===== Photo preview ===== */
+.photo-preview {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+  padding: 12px;
+  background: #faf8ff;
+  border: 1px solid #e3deee;
+  border-radius: 14px;
+}
+
+.photo-preview img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.preview-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.preview-details strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.preview-details small {
+  color: #7a748c;
+}
+
+.remove-photo {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #e5484d;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #f3c4c6;
+  border-radius: 999px;
+}
+
+.remove-photo:hover {
+  background: #fff1f1;
+}
+
+/* ===== Submit button ===== */
+#report-form > button[type="submit"] {
+  display: block;
+  margin: 28px 0 0 auto;
+  padding: 14px 32px;
+  font: inherit;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  background: linear-gradient(135deg, #7c5cff, #6d4aff);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(109, 74, 255, 0.3);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+#report-form > button[type="submit"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(109, 74, 255, 0.4);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  #report-form {
+    margin: 24px 16px 40px;
+    width: auto;
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #report-form > button[type="submit"] {
+    width: 100%;
+  }
+}

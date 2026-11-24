@@ -1,0 +1,16 @@
+< [33mb5319bd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Commented Cloudniary For Testing
+> [33m45f5b9a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Fix Cloudinary dependency conflict
+> [33mb41f710[m Configured DB Link
+> [33m0c4cbf7[m Implemented Matching Algo/Pushed Final Compiled Code
+> [33mc45d65a[m Added Cloudinary/Post Item Feature
+> [33m75910c5[m Fixed Styling/Implemented Product Cards
+> [33m695863a[m Added Report Items/HeroSection/ExploreReportPage
+> [33m8272765[m Added NodeMailer/OTP Verification Routes
+> [33md3207b3[m Added Items/Context/Pages/Implemented Backend
+> [33mf4ae7be[m Delete Frontend/package.json
+> [33m547dc23[m Delete Frontend/package-lock.json
+> [33m300c643[m Delete Frontend/node_modules directory
+> [33m5b2d587[m Added Protected Route/Loader/Login_Signup_Page/Homepage
+> [33m3a6001b[m Added Loader/Pages
+> [33m3622c2b[m Fix Backend folder tracking
+> [33ma347924[m Initial commit
